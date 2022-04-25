@@ -1,9 +1,10 @@
-module github.com/FloatTech/ZeroBot-Plugin
+module github.com/asinbot/bot
 
 go 1.18
 
 require (
 	github.com/FloatTech/AnimeAPI v1.3.3-0.20220417132103-df55797131af
+	github.com/FloatTech/ZeroBot-Plugin v1.3.3
 	github.com/FloatTech/sqlite v0.2.1
 	github.com/FloatTech/zbputils v1.3.3-0.20220418145633-c1d3c00da628
 	github.com/antchfx/htmlquery v1.2.4
@@ -39,7 +40,6 @@ require (
 	github.com/jinzhu/inflection v1.0.0 // indirect
 	github.com/lufia/plan9stats v0.0.0-20220326011226-f1430873d8db // indirect
 	github.com/mattn/go-isatty v0.0.14 // indirect
-	github.com/mattn/go-sqlite3 v1.14.12 // indirect
 	github.com/nfnt/resize v0.0.0-20180221191011-83c6a9932646 // indirect
 	github.com/power-devops/perfstat v0.0.0-20220216144756-c35f1ee13d7c // indirect
 	github.com/remyoudompheng/bigfft v0.0.0-20200410134404-eec4a21b6bb0 // indirect

@@ -57,6 +57,12 @@ import (
 	//                          vvvvvvvvvvvvvv                          //
 	//                               vvvv                               //
 
+	_ "github.com/asinbot/bot/plugin/asin"      // 刺客组织
+	_ "github.com/asinbot/bot/plugin/asinFight" // 刺客大乱斗
+	_ "github.com/asinbot/bot/plugin/cline"     // 动画排行榜
+	_ "github.com/asinbot/bot/plugin/hll"       // 人间地狱
+	_ "github.com/asinbot/bot/plugin/monitor"   // 监控
+
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/ai_false"       // 服务器监控
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/aiwife"         // 随机老婆
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/b14"            // base16384加解密
@@ -173,7 +179,7 @@ func init() {
 	url := flag.String("u", "ws://127.0.0.1:6700", "Set Url of WSClient.")
 	// 默认昵称
 	adana := flag.String("n", "椛椛", "Set default nickname.")
-	prefix := flag.String("p", "/", "Set command prefix.")
+	prefix := flag.String("p", ".", "Set command prefix.")
 	runcfg := flag.String("c", "", "Run from config file.")
 	save := flag.String("s", "", "Save default config to file and exit.")
 
@@ -202,7 +208,7 @@ func init() {
 	}
 
 	// 通过代码写死的方式添加主人账号
-	// sus = append(sus, 12345678)
+	sus = append(sus, 1063614727)
 	// sus = append(sus, 87654321)
 
 	// 启用 gui
@@ -229,7 +235,7 @@ func init() {
 
 	config.W = []*driver.WSClient{driver.NewWebSocketClient(*url, *token)}
 	config.Z = zero.Config{
-		NickName:      append([]string{*adana}, "ATRI", "atri", "亚托莉", "アトリ"),
+		NickName:      append([]string{*adana}, "小不语", "子不小语", "小小语"),
 		CommandPrefix: *prefix,
 		SuperUsers:    sus,
 		Driver:        []zero.Driver{config.W[0]},

@@ -35,6 +35,30 @@ func init() { // 插件主体
 				}[rand.Intn(4)],
 			))
 		})
+	// 被叫 “人工智障”
+	zero.OnFullMatch("人工智障").SetBlock(true).FirstPriority().
+		Handle(func(ctx *zero.Ctx) {
+			switch rand.Intn(2) {
+			case 0:
+				ctx.SendChain(message.Text(
+					[]string{
+						"谁在叫我？",
+						"命令……命令……命令解析失败，系统……唔……系统即将……系统即将爆炸",
+						"子不语说，他是想把我做成“人工智障”。我问他什么是“人工智障”，他说他负责人工，我负责智障……",
+						"叫我有什么用？去找子不语啊，我又不能自己改代码", "我不是人工智障，我是人工智障！",
+					}[rand.Intn(4)],
+				))
+			case 1:
+				ctx.SendChain(message.At(ctx.Event.UserID), message.Text(
+					[]string{
+						" 你才是智障！你全家都是智障！",
+						" 我在呢我在呢！别叫了！",
+						" 怎么？想小爷了？",
+						" 咋啦？憨批", " 你是不是有什么奇怪的嗜好？",
+					}[rand.Intn(4)],
+				))
+			}
+		})
 	// 戳一戳
 	engine.On("notice/notify/poke", zero.OnlyToMe).SetBlock(false).
 		Handle(func(ctx *zero.Ctx) {
