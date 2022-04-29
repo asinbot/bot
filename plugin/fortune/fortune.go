@@ -110,7 +110,7 @@ func init() {
 	)).SetBlock(true).
 		Handle(func(ctx *zero.Ctx) {
 			// 获取该群背景类型，默认车万
-			kind := "车万"
+			kind := "明日方舟"
 			gid := ctx.Event.GroupID
 			if gid <= 0 {
 				// 个人用户设为负数

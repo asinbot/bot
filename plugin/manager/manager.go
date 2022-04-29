@@ -60,7 +60,7 @@ var (
 
 func init() { // 插件主体
 	engine := control.Register("manager", &control.Options{
-		DisableOnDefault:  false,
+		DisableOnDefault:  true,
 		Help:              hint,
 		PrivateDataFolder: "manager",
 	})

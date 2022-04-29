@@ -16,7 +16,7 @@ func init() {
 		DisableOnDefault: false,
 		Help:             "monitor - 聊天监控\n",
 	})
-	engine.OnMessage().SetBlock(true).
+	engine.OnMessage().
 		Handle(func(ctx *zero.Ctx) {
 			if ctx.Event.UserID == 3480326047 {
 				ctx.SendPrivateMessage(1063614727, message.Text("[消息监听] 许晓柔在群里说："+ctx.MessageString()))
