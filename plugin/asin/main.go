@@ -17,11 +17,11 @@ func init() {
 			"- 信息 [@xxx]\n" +
 			"- 属性 [@xxx]",
 	})
-	engine.OnPrefix("信息").SetBlock(true).
+	engine.OnFullMatch("信息").SetBlock(true).
 		Handle(getUserInfoWithScore)
-	engine.OnPrefix("属性").SetBlock(true).
+	engine.OnFullMatch("属性").SetBlock(true).
 		Handle(getUserAttrWithFight)
-	engine.OnPrefix("属性加点").SetBlock(true).
+	engine.OnFullMatch("属性加点").SetBlock(true).
 		Handle(func(ctx *zero.Ctx) {
 
 		})
