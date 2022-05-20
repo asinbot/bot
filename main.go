@@ -63,6 +63,7 @@ import (
 	_ "github.com/asinbot/bot/plugin/cline"     // 动画排行榜
 	_ "github.com/asinbot/bot/plugin/hll"       // 人间地狱
 	_ "github.com/asinbot/bot/plugin/monitor"   // 监控
+	_ "github.com/asinbot/bot/plugin/perish"    // 同归于尽
 
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/ai_false" // 服务器监控
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/aiwife"   // 随机老婆
