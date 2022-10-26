@@ -20,11 +20,6 @@ type Params struct {
 	ctx *zero.Ctx
 }
 
-type groupServer struct {
-	groupid int
-	ids     []int
-}
-
 var gs = map[int64][]int{
 	// jump 群
 	426108037: {14584900},
@@ -75,13 +70,6 @@ func getServerStatus(ctx *zero.Ctx) {
 			log.Errorln("[hll]:", err)
 		}
 		ctx.SendChain(message.Image("base64://" + helper.BytesToString(data)))
-	}
-}
-
-func getSteamId64(ctx *zero.Ctx) {
-	data := request(Params{"http://steamrep.com/search?q=", ctx})
-	if data != nil {
-
 	}
 }
 

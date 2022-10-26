@@ -13,10 +13,6 @@ const (
 	servicename = "hll"
 )
 
-type Test struct {
-	lastUpdateTime string
-}
-
 func init() {
 	// wsc := NewWsClientManager("ws.battlemetrics.com", "/?audit_log=id%3Dd24c7c96-a521-4136-b468-abfc28849fcc", 10000)
 	// wsc.start()
@@ -60,7 +56,7 @@ func init() {
 		Handle(func(ctx *zero.Ctx) {
 			if ctx.Event.GroupID == 426108037 || ctx.Event.GroupID == 865821038 {
 				// ctx.SendChain(message.At(ctx.Event.UserID), message.Text("萌新想要一起玩可以来YY 28915649，看哪个子频道有人可以去问问。每天晚上也会有人组织带新的。新训营群号：798429948"))
-				ctx.SendChain(message.At(ctx.Event.UserID), message.Text("萌新想要一起玩可以来YY 230863，看哪个子频道有人可以去问问。每天晚上也会有人组织带新的。新训营群号：798429948"))
+				ctx.SendChain(message.At(ctx.Event.UserID), message.Text("萌新想要一起玩可以来KOOK 65936804，看哪个子频道有人可以去问问。每天晚上也会有人组织带新的。新训营群号：798429948（KOOK记得领身份哦！！！）"))
 			}
 		})
 	engine.OnKeywordGroup([]string{"vip", "VIP"}).SetBlock(true).
